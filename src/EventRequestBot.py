@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 
+WEBDRIVER_PATH = '..\\assets\\geckodriver.exe'
 USER_NAME = ''
 PASSWORD = ''
 
@@ -17,7 +18,7 @@ SAFAC_ACC_NUM = '170178'
 EST_COST = '$0'
 PHONE_NUMBER = '2672748265'
 
-browser = webdriver.Firefox(executable_path='D:\\GitRepositories\\event-request-bot\\assets\\geckodriver.exe')
+browser = webdriver.Firefox(executable_path=WEBDRIVER_PATH)
 browser.implicitly_wait(10)  # this thing runs too fast, increase for slower internet
 browser.get('https://dragonlink.drexel.edu/')
 browser.find_element_by_class_name('css-lnzkvj').click()  # log-in button
