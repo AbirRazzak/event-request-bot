@@ -22,7 +22,6 @@ WEBDRIVER_PATH = '../assets/geckodriver'  # Mac driver
 # SAFAC_ACC_NUM = '170178'
 # EST_COST = '$0'
 # PHONE_NUMBER = '2672748265'
-CREATE_LINK = 'https://dragonlink.drexel.edu/submitter/organization/'+'FISDU'+'/eventsubmission/create'
 
 
 def check_client():
@@ -46,7 +45,8 @@ def create_request(user: User, event: Event):
     time.sleep(1)
     # browser.get('https://dragonlink.drexel.edu/actioncenter/organization/fisdu/events')
     # browser.find_element_by_class_name('button-text').click()
-    browser.get(CREATE_LINK)
+    create_link = 'https://dragonlink.drexel.edu/submitter/organization/{}/eventsubmission/create'.format(user.org_name)
+    browser.get(create_link)
     time.sleep(1)
 
     # page 1
