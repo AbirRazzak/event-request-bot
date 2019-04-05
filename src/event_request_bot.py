@@ -25,6 +25,14 @@ WEBDRIVER_PATH = '../assets/geckodriver'  # Mac driver
 CREATE_LINK = 'https://dragonlink.drexel.edu/submitter/organization/'+'FISDU'+'/eventsubmission/create'
 
 
+def check_client():
+    try:
+        browser = webdriver.Firefox(executable_path=WEBDRIVER_PATH)
+        browser.close()
+    except:
+        print("Could not launch GeckoDriver for Firefox. Check to make sure the correct WEBDRIVER_PATH is defined.")
+
+
 def create_request(user: User, event: Event):
     password = getpass.getpass(prompt='DragonLink Password: ')
     browser = webdriver.Firefox(executable_path=WEBDRIVER_PATH)
