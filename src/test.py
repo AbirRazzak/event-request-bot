@@ -26,7 +26,4 @@ class EventRequestTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    # test = EventRequestTests()
-    # test.test_client()
-    # test.test_create()
     unittest.main()
