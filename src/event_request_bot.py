@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 import time
+import getpass
 from user import User
 from event import Event
 
@@ -24,7 +25,7 @@ CREATE_LINK = 'https://dragonlink.drexel.edu/submitter/organization/'+'FISDU'+'/
 
 
 def create_request(user: User, event: Event):
-    password = input('Enter DragonLink password: ')
+    password = getpass.getpass(prompt='DragonLink Password: ')
     browser = webdriver.Firefox(executable_path=WEBDRIVER_PATH)
     browser.implicitly_wait(60)  # this thing runs too fast, increase for slower internet
     browser.get('https://dragonlink.drexel.edu/')
