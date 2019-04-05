@@ -6,7 +6,8 @@ import getpass
 from user import User
 from event import Event
 
-WEBDRIVER_PATH = '..\\assets\\geckodriver.exe'
+# WEBDRIVER_PATH = '..\\assets\\geckodriver.exe'  # Windows driver
+WEBDRIVER_PATH = '../assets/geckodriver'  # Mac driver
 # USER_NAME = ''
 # PASSWORD = ''
 #
