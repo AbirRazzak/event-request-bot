@@ -58,3 +58,11 @@ docs/_build/
 target/
 
 assets/\.DS_Store
+
+\.DS_Store
+
+src/\.idea/vcs\.xml
+
+src/\.idea/src\.iml
+
+src/\.idea/misc\.xml
