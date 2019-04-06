@@ -8,7 +8,7 @@ class EventRequestTests(unittest.TestCase):
     def setUp(self):
         self.user = User('', 'amr439', '1234567890', 'FISDU', '123456')
         self.event = Event('Test Event', 'Test description', '01 Apr 2019', '01:15 PM', '02:15 PM',
-                           'Drexel Park', '200', '$20')
+                           'Drexel Park', '200', '$20', False, False, True)
 
     def test_client(self):
         try:
