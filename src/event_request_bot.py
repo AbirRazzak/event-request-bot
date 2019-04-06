@@ -95,16 +95,18 @@ def create_request(user: User, event: Event):
     # .select_by_visible_text('Identity Based- CE Contact is Maurice Cottman')
     browser.find_element_by_css_selector("input[type='radio'][value='33457723'").click()  # org is not new
 
-    # TODO: ADD LOGIC TO CHOOSE OPEN OR CLOSED EVENT
-    browser.find_element_by_css_selector("input[type='radio'][value='33457724'").click()  # if open event
-    browser.find_element_by_css_selector("input[type='radio'][value='33457725'").click()  # if closed event
+    if event.isOpen:
+        browser.find_element_by_css_selector("input[type='radio'][value='33457724'").click()
+    else:
+        browser.find_element_by_css_selector("input[type='radio'][value='33457725'").click()
 
     browser.find_element_by_id('answerTextBox-33457726-free').send_keys(event.estimatedAttendance)  # estimated attendance
     browser.find_element_by_css_selector("input[type='radio'][value='33457727'").click()  # on campus event
 
-    # TODO: ADD LOGIC TO CHOOSE YES OR NO FOOD
-    browser.find_element_by_css_selector("input[type='radio'][value='33457730'").click()  # if providing food
-    browser.find_element_by_css_selector("input[type='radio'][value='33457731'").click()  # if no food
+    if event.needs_food:
+        browser.find_element_by_css_selector("input[type='radio'][value='33457730'").click()
+    else:
+        browser.find_element_by_css_selector("input[type='radio'][value='33457731'").click()
 
     browser.find_element_by_css_selector("input[type='radio'][value='33457732'").click()  # using SAFAC funds
     browser.find_element_by_id('answerTextBox-33457732-free').send_keys(user.safac_account_number)
@@ -114,10 +116,11 @@ def create_request(user: User, event: Event):
     time.sleep(1)
 
     # page 5
-    # TODO: ADD LOGIC TO CHOOSE YES OR NO EQUIPMENT
-    browser.find_element_by_css_selector("input[type='radio'][value='33845560'").click()  # if need to reserve equipment
-    browser.find_element_by_css_selector("input[type='radio'][value='33845561'").click()  # if no
+    if event.needs_equipment:
+        browser.find_element_by_css_selector("input[type='radio'][value='33845560'").click()
+    else:
+        browser.find_element_by_css_selector("input[type='radio'][value='33845561'").click()
+
     browser.find_element_by_css_selector("input[type='radio'][value='31993464'").click()  # yes, need to reserve space
 
     # can probably manually do the rest by myself
-    # TODO: WRITE A COMMAND LINE OR UI TO INPUT VALUES TO RUN THIS CODE

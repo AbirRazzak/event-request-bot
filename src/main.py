@@ -20,8 +20,16 @@ def create_event() -> Event:
     loc = input('Event Location: ')
     estatt = input('Estimated Attendance: ')
     estcost = input('Estimated Cost: ')
-    return Event(name, desc, sdate, stime, etime, loc, estatt, estcost)
+    isopen = convert_response(input('Is this event open? (yes/no): '))
+    needfd = convert_response(input('Will you be providing food? (yes/no): '))
+    needeqp = convert_response(input('Do you need equipment? (yes/no): '))
+    return Event(name, desc, sdate, stime, etime, loc, estatt, estcost, isopen, needfd, needeqp)
 
+
+def convert_response(resp):
+    if resp == 'Yes' or resp == 'yes':
+        return True
+    return False
 
 if __name__ == '__main__':
     print('Hello human, here to make an event?')

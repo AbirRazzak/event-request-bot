@@ -1,5 +1,5 @@
 class Event:
-    def __init__(self, name, desc, sdate, stime, etime, loc, estatt, estcost):
+    def __init__(self, name, desc, sdate, stime, etime, loc, estatt, estcost, isopen, needfd, needeqp):
         self.name = name
         self.description = desc
         self.startDate = sdate
@@ -9,3 +9,6 @@ class Event:
         self.location = loc
         self.estimatedAttendance = estatt
         self.estimatedCost = estcost
+        self.isOpen = isopen
+        self.needs_food = needfd
+        self.needs_equipment = needeqp
