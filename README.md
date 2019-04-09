@@ -2,7 +2,7 @@
 Are you an event coordinator of a Drexel Student Organization? Hate filling out those tedious event requests on DragonLink? If so, have no fear, for the Event Request Bot is here! This bot will ask you a few questions about the event you want to submit into Drexel's system and the bot handles the rest!
 
 # How to run
-(Once I build the CLI, I will update this section)
+run `python3 main.py` in the /src directory
 
 ## Why did I build this?
 Event Services at Drexel University makes me fill out these event requests every time I want to request a room for an event held on campus. That's fine and all, but the paperwork becomes really tedious as there are a lot of redundant questions and for the most part that doesn't really change from event to event (such as orgID, is this org new, etc.).
