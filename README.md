@@ -1,3 +1,7 @@
+Update 5/20: Well, this was a fun little side project while it lasted. I made pretty good use of this tool while I was event coordinator for the Filipino Intercultural Society of Drexel University. I will be stepping down from the position of event coordinator in a few weeks, and I no longer have any more event requests to put in. I will be archieving this repositiory, so that I can use it to show some of the code and side projects I have made as a student. This repository will be open to be forked, for anyone that wishes to continue this fun little project of mine. Really, it was a fun time learning about Selenium and watching this script auto-fill information on all those pages. Take care Event Request Bot, I will miss working on you.
+
+Totally forgot to mention why I need to drop this project. Since I'm no longer an event coordinator in Drexel's system, I will not have access to the event request forms, so there's no way for me to use or test the script any longer. Therefore, I will need to discontinue this side project since I can no longer operate it.
+
 # Event Request Bot (IVP Bot)
 Are you an event coordinator of a Drexel Student Organization? Hate filling out those tedious event requests on DragonLink? If so, have no fear, for the Event Request Bot is here! This bot will ask you a few questions about the event you want to submit into Drexel's system and the bot handles the rest!
 
